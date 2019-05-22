@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title alight="center">
+      Ionic
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-button alight="center" (click)="adddata()" color="danger" >เพิ่มข้อมูล</ion-button>
+ 
+   
+  <ion-card *ngFor = "let item of dataList"> <!--วนลูปค่าที่จะโชว์-->
+    <ion-card-content>
+
+        <ion-item color="secondary">
+            <ion-label>
+               รหัส : {{item.sup_id}} 
+              
+            </ion-label>
+          </ion-item>
+
+          <ion-item color="primary">
+              <ion-label>                 
+         ชื่อสินค้า : {{item.sup_name}}                              
+              </ion-label>
+            </ion-item>
+
+            <ion-item color="warning">
+                <ion-label>                 
+                   ราคาสินค้า : {{item.sup_price}}                  
+                </ion-label>
+              </ion-item>
+
+      
+      
+     
+     <ion-button (click)="editdata(item.sup_id)" expand="full" color="danger">แก้ไขข้อมูล </ion-button>   
+     <ion-button (click)="deletedata(item.sup_id)" expand="full" color="dark">ลบ</ion-button>
+    
+            
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-content>
+      <!-- fab placed to the top end -->
+      <ion-fab vertical="top" horizontal="end" slot="fixed">
+        <ion-fab-button>
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    
+
+
+
+</ion-content>
+

@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title alight="center">
+        เพิ่มข้อมูล
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <br>
+  <br>
+  <br>
+
+<ion-content>
+    <form novalidate #myForm="ngForm" (ngSubmit)="insert(myForm.value)">   
+
+      
+    <ion-input type="text" ngModel name="sup_name" placeholder="ใส่ชื่อ"></ion-input>
+  
+  <ion-input  type="text" ngModel name="sup_pirce" placeholder="ราคา"></ion-input>
+ 
+  <ion-button type="submit" expand="full">เพิ่มข้อมูล</ion-button>
+
+  <ion-list>
+      <ion-row>
+        <ion-col style="padding:0%">
+          <ion-card style="padding:0%">
+            <ion-card-header> <span class="txt-card">รายการที่เพิ่ม</span>
+              <hr class="style-two">
+              <div class="txt-cate">
+                <ion-button size="small" shape="round" color="gold" fill="outline">2 รายการ</ion-button>
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col style="padding:0%">
+          <ion-card>
+            <ion-card-header> <span class="txt-card">จำนวนทั้งหมด</span>
+              <hr class="style-two">
+              <div class="txt-cate">
+                <ion-button size="small" shape="round" color="gold" fill="outline">3 รายการ</ion-button>
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </form>
+  </ion-content>
+
+
+  <ion-button color="danger">กลับหน้าแรก</ion-button>
+
+  

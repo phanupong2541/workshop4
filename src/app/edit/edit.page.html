@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title  alight="center">
+        เพิ่มข้อมูล
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <br>
+  <br>
+  <br>
+
+
+<ion-content *ngFor = "let item of dataList">
+    <form novalidate #myForm="ngForm" (ngSubmit)="edit(myForm.value)">
+    <ion-input type="text" ngModel name="sup_name"[(ngModel)]="item.sup_name" placeholder="แก้ไขชื่อ"></ion-input>
+  
+  <ion-input  type="text" ngModel name="sup_pirce" [(ngModel)]="item.sup_pirce"placeholder="แก้ไขราคา"></ion-input>
+  
+  
+  <ion-button type="submit" expand="full">ยืนยัน</ion-button>
+  </form>
+  </ion-content>
+
+  <ion-button color="danger">กลับหน้าแรก</ion-button>
